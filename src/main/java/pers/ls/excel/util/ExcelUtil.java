@@ -13,7 +13,6 @@ import java.util.*;
 public final class ExcelUtil<T> {
 
     public static <T> Workbook createWorkbook(List<String> fields, List<T> datas, Class<T> tClass) throws IllegalAccessException {
-        //过滤需要的title
         Map<String, Field> map = getExcelEntity(fields, tClass);
         List<String> actualTitles = new ArrayList<>(map.keySet());
         Workbook workbook = new XSSFWorkbook();
